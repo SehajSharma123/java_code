@@ -1,0 +1,355 @@
+/*
+=====================================================
+        JAVA COLLECTIONS FRAMEWORK
+=====================================================
+Programs Included
+1. ArrayList
+2. LinkedList
+3. Vector
+4. Stack
+5. Queue
+=====================================================
+*/
+
+import java.util.*;
+
+public class CollectionsFramework {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+        arrayListExample();
+
+        System.out.println("\n========== Program 2 ==========");
+        linkedListExample();
+
+        System.out.println("\n========== Program 3 ==========");
+        vectorExample();
+
+        System.out.println("\n========== Program 4 ==========");
+        stackExample();
+
+        System.out.println("\n========== Program 5 ==========");
+        queueExample();
+
+    }
+
+    //=====================================================
+    // Program 1 : ArrayList
+    //=====================================================
+
+    static void arrayListExample() {
+
+        ArrayList<String> students = new ArrayList<>();
+
+        students.add("Divyanshi");
+        students.add("Rahul");
+        students.add("Aman");
+        students.add("Priya");
+
+        System.out.println("Students : " + students);
+
+    }
+
+    //=====================================================
+    // Program 2 : LinkedList
+    //=====================================================
+
+    static void linkedListExample() {
+
+        LinkedList<String> cities = new LinkedList<>();
+
+        cities.add("Delhi");
+        cities.add("Mumbai");
+        cities.add("Chandigarh");
+
+        System.out.println(cities);
+
+    }
+
+    //=====================================================
+    // Program 3 : Vector
+    //=====================================================
+
+    static void vectorExample() {
+
+        Vector<Integer> numbers = new Vector<>();
+
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+
+        System.out.println(numbers);
+
+    }
+
+    //=====================================================
+    // Program 4 : Stack
+    //=====================================================
+
+    static void stackExample() {
+
+        Stack<String> books = new Stack<>();
+
+        books.push("Java");
+        books.push("Python");
+        books.push("C++");
+
+        System.out.println("Stack : " + books);
+
+        System.out.println("Top Element : " + books.peek());
+
+        books.pop();
+
+        System.out.println("After Pop : " + books);
+
+    }
+
+    //=====================================================
+    // Program 5 : Queue
+    //=====================================================
+
+    static void queueExample() {
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.offer("Student 1");
+        queue.offer("Student 2");
+        queue.offer("Student 3");
+
+        System.out.println(queue);
+
+        queue.poll();
+
+        System.out.println("After Poll : " + queue);
+
+    }
+
+}
+/*
+=====================================================
+        JAVA COLLECTIONS FRAMEWORK
+=====================================================
+Programs Included
+1. ArrayList
+2. LinkedList
+3. Vector
+4. Stack
+5. Queue
+=====================================================
+*/
+
+import java.util.*;
+
+public class CollectionsFramework {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+        arrayListExample();
+
+        System.out.println("\n========== Program 2 ==========");
+        linkedListExample();
+
+        System.out.println("\n========== Program 3 ==========");
+        vectorExample();
+
+        System.out.println("\n========== Program 4 ==========");
+        stackExample();
+
+        System.out.println("\n========== Program 5 ==========");
+        queueExample();
+
+    }
+
+    //=====================================================
+    // Program 1 : ArrayList
+    //=====================================================
+
+    static void arrayListExample() {
+
+        ArrayList<String> students = new ArrayList<>();
+
+        students.add("Divyanshi");
+        students.add("Rahul");
+        students.add("Aman");
+        students.add("Priya");
+
+        System.out.println("Students : " + students);
+
+    }
+
+    //=====================================================
+    // Program 2 : LinkedList
+    //=====================================================
+
+    static void linkedListExample() {
+
+        LinkedList<String> cities = new LinkedList<>();
+
+        cities.add("Delhi");
+        cities.add("Mumbai");
+        cities.add("Chandigarh");
+
+        System.out.println(cities);
+
+    }
+
+    //=====================================================
+    // Program 3 : Vector
+    //=====================================================
+
+    static void vectorExample() {
+
+        Vector<Integer> numbers = new Vector<>();
+
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+
+        System.out.println(numbers);
+
+    }
+
+    //=====================================================
+    // Program 4 : Stack
+    //=====================================================
+
+    static void stackExample() {
+
+        Stack<String> books = new Stack<>();
+
+        books.push("Java");
+        books.push("Python");
+        books.push("C++");
+
+        System.out.println("Stack : " + books);
+
+        System.out.println("Top Element : " + books.peek());
+
+        books.pop();
+
+        System.out.println("After Pop : " + books);
+
+    }
+
+    //=====================================================
+    // Program 5 : Queue
+    //=====================================================
+
+    static void queueExample() {
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.offer("Student 1");
+        queue.offer("Student 2");
+        queue.offer("Student 3");
+
+        System.out.println(queue);
+
+        queue.poll();
+
+        System.out.println("After Poll : " + queue);
+
+    }
+
+}
+//=====================================================
+// Program 6 : HashSet
+//=====================================================
+
+static void hashSetExample() {
+
+    HashSet<String> fruits = new HashSet<>();
+
+    fruits.add("Apple");
+    fruits.add("Banana");
+    fruits.add("Mango");
+    fruits.add("Apple");
+
+    System.out.println("HashSet : " + fruits);
+
+}
+
+
+//=====================================================
+// Program 7 : TreeSet
+//=====================================================
+
+static void treeSetExample() {
+
+    TreeSet<Integer> numbers = new TreeSet<>();
+
+    numbers.add(50);
+    numbers.add(10);
+    numbers.add(80);
+    numbers.add(30);
+    numbers.add(10);
+
+    System.out.println("TreeSet : " + numbers);
+
+}
+
+
+//=====================================================
+// Program 8 : HashMap
+//=====================================================
+
+static void hashMapExample() {
+
+    HashMap<Integer, String> students = new HashMap<>();
+
+    students.put(101, "Divyanshi");
+    students.put(102, "Rahul");
+    students.put(103, "Priya");
+
+    System.out.println("HashMap : " + students);
+
+    System.out.println("Student with ID 102 : " + students.get(102));
+
+}
+
+
+//=====================================================
+// Program 9 : TreeMap
+//=====================================================
+
+static void treeMapExample() {
+
+    TreeMap<Integer, String> employees = new TreeMap<>();
+
+    employees.put(3, "Amit");
+    employees.put(1, "Riya");
+    employees.put(2, "Karan");
+
+    System.out.println("TreeMap : " + employees);
+
+}
+
+
+//=====================================================
+// Program 10 : Iterator
+//=====================================================
+
+static void iteratorExample() {
+
+    ArrayList<String> languages = new ArrayList<>();
+
+    languages.add("Java");
+    languages.add("Python");
+    languages.add("C++");
+    languages.add("JavaScript");
+
+    Iterator<String> iterator = languages.iterator();
+
+    System.out.println("Languages:");
+
+    while (iterator.hasNext()) {
+
+        System.out.println(iterator.next());
+
+    }
+
+}

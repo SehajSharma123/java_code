@@ -1,0 +1,315 @@
+/*
+=====================================================
+             FILE HANDLING IN JAVA
+=====================================================
+Programs Included
+1. Create File
+2. Write to File
+3. Read File
+4. Append Data
+5. Delete File
+=====================================================
+*/
+
+import java.io.*;
+import java.util.Scanner;
+
+public class FileHandling {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+        createFile();
+
+        System.out.println("\n========== Program 2 ==========");
+        writeFile();
+
+        System.out.println("\n========== Program 3 ==========");
+        readFile();
+
+        System.out.println("\n========== Program 4 ==========");
+        appendFile();
+
+        System.out.println("\n========== Program 5 ==========");
+        deleteFile();
+
+    }
+
+    //=====================================================
+    // Program 1 : Create File
+    //=====================================================
+
+    static void createFile() {
+
+        try {
+
+            File file = new File("student.txt");
+
+            if (file.createNewFile())
+                System.out.println("File Created Successfully.");
+            else
+                System.out.println("File Already Exists.");
+
+        } catch (IOException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 2 : Write to File
+    //=====================================================
+
+    static void writeFile() {
+
+        try {
+
+            FileWriter writer = new FileWriter("student.txt");
+
+            writer.write("Name : Divyanshi\n");
+            writer.write("Course : Java Programming\n");
+            writer.write("GitHub Repository Demo");
+
+            writer.close();
+
+            System.out.println("Data Written Successfully.");
+
+        } catch (IOException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 3 : Read File
+    //=====================================================
+
+    static void readFile() {
+
+        try {
+
+            File file = new File("student.txt");
+
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()) {
+
+                System.out.println(sc.nextLine());
+
+            }
+
+            sc.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 4 : Append Data
+    //=====================================================
+
+    static void appendFile() {
+
+        try {
+
+            FileWriter writer = new FileWriter("student.txt", true);
+
+            writer.write("\nCollege : XYZ College");
+
+            writer.close();
+
+            System.out.println("Data Appended Successfully.");
+
+        } catch (IOException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 5 : Delete File
+    //=====================================================
+
+    static void deleteFile() {
+
+        File file = new File("student.txt");
+
+        if (file.delete())
+            System.out.println("File Deleted Successfully.");
+        else
+            System.out.println("File Not Found or Already Deleted.");
+
+    }
+
+}
+System.out.println("\n========== Program 6 ==========");
+checkFileExists();
+
+System.out.println("\n========== Program 7 ==========");
+fileInformation();
+
+System.out.println("\n========== Program 8 ==========");
+countLines();
+
+System.out.println("\n========== Program 9 ==========");
+copyFile();
+
+System.out.println("\n========== Program 10 ==========");
+bufferedReadWrite();
+//=====================================================
+// Program 6 : Check File Exists
+//=====================================================
+
+static void checkFileExists() {
+
+    File file = new File("student.txt");
+
+    if (file.exists())
+        System.out.println("File Exists.");
+    else
+        System.out.println("File Does Not Exist.");
+
+}
+
+
+//=====================================================
+// Program 7 : Get File Information
+//=====================================================
+
+static void fileInformation() {
+
+    File file = new File("student.txt");
+
+    if (file.exists()) {
+
+        System.out.println("File Name      : " + file.getName());
+        System.out.println("File Path      : " + file.getAbsolutePath());
+        System.out.println("Readable       : " + file.canRead());
+        System.out.println("Writable       : " + file.canWrite());
+        System.out.println("File Size      : " + file.length() + " bytes");
+
+    } else {
+
+        System.out.println("File Not Found.");
+
+    }
+
+}
+
+
+//=====================================================
+// Program 8 : Count Lines in File
+//=====================================================
+
+static void countLines() {
+
+    try {
+
+        File file = new File("student.txt");
+
+        Scanner scanner = new Scanner(file);
+
+        int lines = 0;
+
+        while (scanner.hasNextLine()) {
+
+            scanner.nextLine();
+            lines++;
+
+        }
+
+        scanner.close();
+
+        System.out.println("Total Lines = " + lines);
+
+    } catch (Exception e) {
+
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 9 : Copy File
+//=====================================================
+
+static void copyFile() {
+
+    try {
+
+        FileInputStream input = new FileInputStream("student.txt");
+        FileOutputStream output = new FileOutputStream("student_copy.txt");
+
+        int data;
+
+        while ((data = input.read()) != -1) {
+
+            output.write(data);
+
+        }
+
+        input.close();
+        output.close();
+
+        System.out.println("File Copied Successfully.");
+
+    } catch (IOException e) {
+
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 10 : BufferedReader & BufferedWriter
+//=====================================================
+
+static void bufferedReadWrite() {
+
+    try {
+
+        BufferedWriter writer = new BufferedWriter(
+                new FileWriter("buffer.txt"));
+
+        writer.write("Welcome to Java File Handling");
+        writer.newLine();
+        writer.write("BufferedWriter Example");
+
+        writer.close();
+
+        BufferedReader reader = new BufferedReader(
+                new FileReader("buffer.txt"));
+
+        String line;
+
+        System.out.println("Contents of buffer.txt:");
+
+        while ((line = reader.readLine()) != null) {
+
+            System.out.println(line);
+
+        }
+
+        reader.close();
+
+    } catch (IOException e) {
+
+        System.out.println(e.getMessage());
+
+    }
+
+}

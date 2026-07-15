@@ -1,0 +1,281 @@
+/*
+=====================================================
+              OOP CONCEPTS IN JAVA
+=====================================================
+Programs Included
+1. Class and Object
+2. Default Constructor
+3. Parameterized Constructor
+4. Constructor Overloading
+5. Single Inheritance
+=====================================================
+*/
+
+public class OOPConcepts {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+
+        Student s1 = new Student();
+        s1.display();
+
+        System.out.println("\n========== Program 2 ==========");
+
+        Employee e1 = new Employee();
+
+        System.out.println("\n========== Program 3 ==========");
+
+        Car c1 = new Car("BMW", 2025);
+        c1.display();
+
+        System.out.println("\n========== Program 4 ==========");
+
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle(20, 10);
+
+        System.out.println("\n========== Program 5 ==========");
+
+        Dog d1 = new Dog();
+        d1.sound();
+
+    }
+
+}
+
+/*=====================================================
+Program 1 : Class and Object
+=====================================================*/
+
+class Student {
+
+    String name = "Divyanshi";
+    int age = 20;
+
+    void display() {
+        System.out.println("Name : " + name);
+        System.out.println("Age  : " + age);
+    }
+}
+
+/*=====================================================
+Program 2 : Default Constructor
+=====================================================*/
+
+class Employee {
+
+    Employee() {
+        System.out.println("Default Constructor Called");
+    }
+
+}
+
+/*=====================================================
+Program 3 : Parameterized Constructor
+=====================================================*/
+
+class Car {
+
+    String brand;
+    int year;
+
+    Car(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    void display() {
+
+        System.out.println("Brand : " + brand);
+        System.out.println("Year  : " + year);
+
+    }
+
+}
+
+/*=====================================================
+Program 4 : Constructor Overloading
+=====================================================*/
+
+class Rectangle {
+
+    Rectangle() {
+        System.out.println("Default Constructor");
+    }
+
+    Rectangle(int length, int width) {
+
+        int area = length * width;
+
+        System.out.println("Area = " + area);
+
+    }
+
+}
+
+/*=====================================================
+Program 5 : Single Inheritance
+=====================================================*/
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes a sound.");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+
+        super.sound();
+
+        System.out.println("Dog barks.");
+
+    }
+
+}
+
+/*
+=====================================================
+END OF PART 1
+=====================================================
+*/
+System.out.println("\n========== Program 6 ==========");
+Puppy puppy = new Puppy();
+puppy.eat();
+puppy.bark();
+
+System.out.println("\n========== Program 7 ==========");
+Circle circle = new Circle();
+RectangleShape rectangle = new RectangleShape();
+
+circle.draw();
+rectangle.draw();
+
+System.out.println("\n========== Program 8 ==========");
+ICICIBank bank = new ICICIBank();
+bank.interest();
+
+System.out.println("\n========== Program 9 ==========");
+Bike bike = new Bike();
+bike.start();
+
+System.out.println("\n========== Program 10 ==========");
+Printer printer = new Printer();
+printer.print();
+/*=====================================================
+Program 6 : Multilevel Inheritance
+=====================================================*/
+
+class LivingThing {
+
+    void eat() {
+        System.out.println("Living things eat.");
+    }
+
+}
+
+class Animal1 extends LivingThing {
+
+    void walk() {
+        System.out.println("Animals can walk.");
+    }
+
+}
+
+class Puppy extends Animal1 {
+
+    void bark() {
+        System.out.println("Puppy barks.");
+    }
+
+}
+
+/*=====================================================
+Program 7 : Hierarchical Inheritance
+=====================================================*/
+
+class Shape {
+
+    void draw() {
+        System.out.println("Drawing Shape");
+    }
+
+}
+
+class Circle extends Shape {
+
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+
+}
+
+class RectangleShape extends Shape {
+
+    void draw() {
+        System.out.println("Drawing Rectangle");
+    }
+
+}
+
+/*=====================================================
+Program 8 : Method Overriding
+=====================================================*/
+
+class Bank {
+
+    void interest() {
+        System.out.println("Bank Interest Rate");
+    }
+
+}
+
+class ICICIBank extends Bank {
+
+    @Override
+    void interest() {
+        System.out.println("ICICI Bank Interest Rate : 7%");
+    }
+
+}
+
+/*=====================================================
+Program 9 : Abstract Class
+=====================================================*/
+
+abstract class Vehicle {
+
+    abstract void start();
+
+}
+
+class Bike extends Vehicle {
+
+    @Override
+    void start() {
+        System.out.println("Bike Started.");
+    }
+
+}
+
+/*=====================================================
+Program 10 : Interface
+=====================================================*/
+
+interface Printable {
+
+    void print();
+
+}
+
+class Printer implements Printable {
+
+    @Override
+    public void print() {
+        System.out.println("Printing Document...");
+    }
+
+}

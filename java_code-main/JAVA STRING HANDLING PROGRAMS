@@ -1,0 +1,269 @@
+import java.util.*;public class StringHandling {
+
+    public static void main(String[] args) {
+
+        reverseString();
+        palindrome();
+        countVowels();
+        countWords();
+        countCharacters();
+        removeSpaces();
+        compareStrings();
+        anagram();
+        upperLower();
+        characterFrequency();
+
+    }
+
+    static void reverseString() {
+        // code
+    }
+
+    static void palindrome() {
+        // code
+    }
+
+    // ...remaining methods...
+}
+
+//=========================================================
+// Program 1 : Reverse a String
+//=========================================================
+public class StringHandling {
+
+    public static void main(String[] args) {
+
+        String str = "Java Programming";
+
+        String reverse = "";
+
+        for(int i = str.length()-1; i>=0; i--){
+            reverse += str.charAt(i);
+        }
+
+        System.out.println("Original String : " + str);
+        System.out.println("Reversed String : " + reverse);
+    }
+}
+
+
+//=========================================================
+// Program 2 : Palindrome String
+//=========================================================
+
+class PalindromeString {
+
+    public static void main(String[] args) {
+
+        String str = "madam";
+
+        String reverse = "";
+
+        for(int i=str.length()-1;i>=0;i--){
+            reverse += str.charAt(i);
+        }
+
+        if(str.equals(reverse))
+            System.out.println(str + " is Palindrome");
+        else
+            System.out.println(str + " is Not Palindrome");
+    }
+}
+
+
+//=========================================================
+// Program 3 : Count Vowels
+//=========================================================
+
+class CountVowels {
+
+    public static void main(String[] args) {
+
+        String str="Java Programming";
+
+        int count=0;
+
+        str=str.toLowerCase();
+
+        for(int i=0;i<str.length();i++){
+
+            char ch=str.charAt(i);
+
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+                count++;
+        }
+
+        System.out.println("Total Vowels = "+count);
+
+    }
+
+}
+
+
+//=========================================================
+// Program 4 : Count Words
+//=========================================================
+
+class CountWords{
+
+    public static void main(String[] args){
+
+        String str="Welcome To Java Programming";
+
+        String words[]=str.split("\\s+");
+
+        System.out.println("Total Words = "+words.length);
+
+    }
+
+}
+
+
+//=========================================================
+// Program 5 : Count Characters
+//=========================================================
+
+class CountCharacters{
+
+    public static void main(String[] args){
+
+        String str="Java";
+
+        System.out.println("Characters = "+str.length());
+
+    }
+
+}
+
+
+//=========================================================
+// Program 6 : Remove Spaces
+//=========================================================
+
+class RemoveSpaces{
+
+    public static void main(String[] args){
+
+        String str="Java Programming Language";
+
+        str=str.replace(" ","");
+
+        System.out.println(str);
+
+    }
+
+}
+
+
+//=========================================================
+// Program 7 : String Comparison
+//=========================================================
+
+class StringComparison{
+
+    public static void main(String[] args){
+
+        String s1="Java";
+        String s2="Java";
+
+        if(s1.equals(s2))
+            System.out.println("Strings are Equal");
+        else
+            System.out.println("Strings are Not Equal");
+
+    }
+
+}
+
+
+//=========================================================
+// Program 8 : Anagram Check
+//=========================================================
+
+class Anagram{
+
+    public static void main(String[] args){
+
+        String s1="listen";
+        String s2="silent";
+
+        char a[]=s1.toCharArray();
+        char b[]=s2.toCharArray();
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        if(Arrays.equals(a,b))
+            System.out.println("Anagram");
+        else
+            System.out.println("Not Anagram");
+
+    }
+
+}
+
+
+//=========================================================
+// Program 9 : Convert to Uppercase & Lowercase
+//=========================================================
+
+class UpperLower{
+
+    public static void main(String[] args){
+
+        String str="Java Programming";
+
+        System.out.println("Uppercase : "+str.toUpperCase());
+
+        System.out.println("Lowercase : "+str.toLowerCase());
+
+    }
+
+}
+
+
+//=========================================================
+// Program 10 : Character Frequency
+//=========================================================
+
+class CharacterFrequency{
+
+    public static void main(String[] args){
+
+        String str="programming";
+
+        char ch='g';
+
+        int count=0;
+
+        for(int i=0;i<str.length();i++){
+
+            if(str.charAt(i)==ch)
+                count++;
+
+        }
+
+        System.out.println("Frequency of '"+ch+"' = "+count);
+
+    }
+
+}
+
+/*
+=========================================================
+END OF STRING HANDLING PROGRAMS
+=========================================================
+*/
+How to run
+
+Because this file contains 10 different classes, run one program at a time.
+
+For example:
+
+Run StringHandling → Reverse String
+Run PalindromeString → Palindrome
+Run CountVowels → Count Vowels
+Run Anagram → Anagram Check
+Suggestion
+
+For GitHub, this is acceptable, but for a cleaner, more professional repository, it's generally better to have one .java file per program. It makes navigation, compilation, and reuse easier.
