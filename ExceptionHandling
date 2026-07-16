@@ -1,0 +1,456 @@
+/*
+=========================================================
+            EXCEPTION HANDLING IN JAVA
+=========================================================
+Programs Included
+1. Try-Catch Block
+2. Multiple Catch Block
+3. Finally Block
+4. Throw Keyword
+5. Throws Keyword
+=========================================================
+*/
+
+public class ExceptionHandling {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+        tryCatchExample();
+
+        System.out.println("\n========== Program 2 ==========");
+        multipleCatchExample();
+
+        System.out.println("\n========== Program 3 ==========");
+        finallyExample();
+
+        System.out.println("\n========== Program 4 ==========");
+        throwExample();
+
+        System.out.println("\n========== Program 5 ==========");
+        try {
+            throwsExample();
+        } catch (Exception e) {
+            System.out.println("Exception Caught: " + e.getMessage());
+        }
+    }
+
+    //=====================================================
+    // Program 1 : Try-Catch Block
+    //=====================================================
+
+    static void tryCatchExample() {
+
+        try {
+            int result = 10 / 0;
+            System.out.println(result);
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception Caught");
+            System.out.println(e);
+        }
+
+    }
+
+    //=====================================================
+    // Program 2 : Multiple Catch Block
+    //=====================================================
+
+    static void multipleCatchExample() {
+
+        try {
+
+            int[] arr = {10, 20, 30};
+
+            System.out.println(arr[5]);
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Arithmetic Exception");
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+
+            System.out.println("Array Index Out Of Bounds Exception");
+
+        } catch (Exception e) {
+
+            System.out.println("General Exception");
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 3 : Finally Block
+    //=====================================================
+
+    static void finallyExample() {
+
+        try {
+
+            int number = 20 / 2;
+
+            System.out.println("Result = " + number);
+
+        } catch (Exception e) {
+
+            System.out.println("Exception Occurred");
+
+        } finally {
+
+            System.out.println("Finally Block Always Executes");
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 4 : Throw Keyword
+    //=====================================================
+
+    static void throwExample() {
+
+        try {
+
+            int age = 15;
+
+            if (age < 18) {
+
+                throw new ArithmeticException("Not Eligible to Vote");
+
+            }
+
+            System.out.println("Eligible");
+
+        } catch (ArithmeticException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 5 : Throws Keyword
+    //=====================================================
+
+    static void throwsExample() throws Exception {
+
+        int marks = -5;
+
+        if (marks < 0) {
+
+            throw new Exception("Marks Cannot Be Negative");
+
+        }
+
+        System.out.println("Marks = " + marks);
+
+    }
+
+}
+/*
+=========================================================
+            EXCEPTION HANDLING IN JAVA
+=========================================================
+Programs Included
+1. Try-Catch Block
+2. Multiple Catch Block
+3. Finally Block
+4. Throw Keyword
+5. Throws Keyword
+=========================================================
+*/
+
+public class ExceptionHandling {
+
+    public static void main(String[] args) {
+
+        System.out.println("========== Program 1 ==========");
+        tryCatchExample();
+
+        System.out.println("\n========== Program 2 ==========");
+        multipleCatchExample();
+
+        System.out.println("\n========== Program 3 ==========");
+        finallyExample();
+
+        System.out.println("\n========== Program 4 ==========");
+        throwExample();
+
+        System.out.println("\n========== Program 5 ==========");
+        try {
+            throwsExample();
+        } catch (Exception e) {
+            System.out.println("Exception Caught: " + e.getMessage());
+        }
+    }
+
+    //=====================================================
+    // Program 1 : Try-Catch Block
+    //=====================================================
+
+    static void tryCatchExample() {
+
+        try {
+            int result = 10 / 0;
+            System.out.println(result);
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception Caught");
+            System.out.println(e);
+        }
+
+    }
+
+    //=====================================================
+    // Program 2 : Multiple Catch Block
+    //=====================================================
+
+    static void multipleCatchExample() {
+
+        try {
+
+            int[] arr = {10, 20, 30};
+
+            System.out.println(arr[5]);
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Arithmetic Exception");
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+
+            System.out.println("Array Index Out Of Bounds Exception");
+
+        } catch (Exception e) {
+
+            System.out.println("General Exception");
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 3 : Finally Block
+    //=====================================================
+
+    static void finallyExample() {
+
+        try {
+
+            int number = 20 / 2;
+
+            System.out.println("Result = " + number);
+
+        } catch (Exception e) {
+
+            System.out.println("Exception Occurred");
+
+        } finally {
+
+            System.out.println("Finally Block Always Executes");
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 4 : Throw Keyword
+    //=====================================================
+
+    static void throwExample() {
+
+        try {
+
+            int age = 15;
+
+            if (age < 18) {
+
+                throw new ArithmeticException("Not Eligible to Vote");
+
+            }
+
+            System.out.println("Eligible");
+
+        } catch (ArithmeticException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    //=====================================================
+    // Program 5 : Throws Keyword
+    //=====================================================
+
+    static void throwsExample() throws Exception {
+
+        int marks = -5;
+
+        if (marks < 0) {
+
+            throw new Exception("Marks Cannot Be Negative");
+
+        }
+
+        System.out.println("Marks = " + marks);
+
+    }
+
+}
+System.out.println("\n========== Program 6 ==========");
+arithmeticExceptionExample();
+
+System.out.println("\n========== Program 7 ==========");
+arrayIndexExceptionExample();
+
+System.out.println("\n========== Program 8 ==========");
+numberFormatExceptionExample();
+
+System.out.println("\n========== Program 9 ==========");
+nullPointerExceptionExample();
+
+System.out.println("\n========== Program 10 ==========");
+customExceptionExample();
+//=====================================================
+// Program 6 : Arithmetic Exception
+//=====================================================
+
+static void arithmeticExceptionExample() {
+
+    try {
+
+        int a = 50;
+        int b = 0;
+
+        int result = a / b;
+
+        System.out.println(result);
+
+    } catch (ArithmeticException e) {
+
+        System.out.println("Arithmetic Exception Caught");
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 7 : Array Index Out Of Bounds Exception
+//=====================================================
+
+static void arrayIndexExceptionExample() {
+
+    try {
+
+        int[] numbers = {10, 20, 30};
+
+        System.out.println(numbers[5]);
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+
+        System.out.println("Array Index Out Of Bounds Exception");
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 8 : Number Format Exception
+//=====================================================
+
+static void numberFormatExceptionExample() {
+
+    try {
+
+        String value = "Java";
+
+        int number = Integer.parseInt(value);
+
+        System.out.println(number);
+
+    } catch (NumberFormatException e) {
+
+        System.out.println("Number Format Exception");
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 9 : Null Pointer Exception
+//=====================================================
+
+static void nullPointerExceptionExample() {
+
+    try {
+
+        String text = null;
+
+        System.out.println(text.length());
+
+    } catch (NullPointerException e) {
+
+        System.out.println("Null Pointer Exception");
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+//=====================================================
+// Program 10 : Custom Exception
+//=====================================================
+
+static void customExceptionExample() {
+
+    try {
+
+        checkAge(16);
+
+    } catch (InvalidAgeException e) {
+
+        System.out.println(e.getMessage());
+
+    }
+
+}
+
+
+static void checkAge(int age) throws InvalidAgeException {
+
+    if (age < 18) {
+
+        throw new InvalidAgeException("Age must be 18 or above.");
+
+    }
+
+    System.out.println("Eligible.");
+
+}
+
+
+//=====================================================
+// Custom Exception Class
+//=====================================================
+
+class InvalidAgeException extends Exception {
+
+    InvalidAgeException(String message) {
+
+        super(message);
+
+    }
+
+}
+/*
+=========================================================
+END OF FILE
+=========================================================
